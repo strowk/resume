@@ -1,0 +1,48 @@
+{
+  "name": "str-resume",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-brands-svg-icons": "^5.15.4",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.16",
+    "@kodingdotninja/use-tailwind-breakpoint": "^0.0.5",
+    "@popperjs/core": "^2.11.0",
+    "@types/tailwindcss": "^3.0.10",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-markdown": "^8.0.3",
+    "react-popper": "^2.2.5",
+    "react-router-dom": "^6.3.0",
+    "swiper": "^8.2.4",
+    "tailwindcss": "^3.0.7",
+    "use-breakpoint": "^3.0.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.5",
+    "@storybook/addon-actions": "^6.5.0-alpha.4",
+    "@storybook/addon-essentials": "^6.5.0-alpha.4",
+    "@storybook/addon-links": "^6.5.0-alpha.4",
+    "@storybook/react": "^6.5.0-alpha.4",
+    "@types/react": "^17.0.33",
+    "@types/react-dom": "^17.0.10",
+    "@vitejs/plugin-react": "^1.0.7",
+    "autoprefixer": "^10.4.0",
+    "babel-loader": "^8.2.3",
+    "postcss": "^8.4.5",
+    "prettier": "^2.5.1",
+    "sass": "^1.52.3",
+    "storybook-builder-vite": "^0.1.11",
+    "typescript": "^4.4.4",
+    "vite": "^2.7.2"
+  }
+}
