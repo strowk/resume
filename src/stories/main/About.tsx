@@ -9,8 +9,8 @@ export const About: FunctionComponent = () => (
       using tailwind to style it.
     </Text>
     <Text>
-      It is built with Gitlab CI in containerized environment and deployed to
-      Gitlab Pages, where it is distributed as a static site.
+      It is built with Github Actions and deployed to
+      Github Pages, where it is distributed as a static site.
     </Text>
     <Text>
       I am mostly doing this for fun, but also to try these technologies while
