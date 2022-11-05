@@ -19,7 +19,7 @@ export const About: FunctionComponent = () => (
     </Text>
     <Header3>Me</Header3>
     <Text>
-      I have been born in Russia, raised in regional capital and then moved to
+      I have been born in Russia, raised in regional capital and then have moved to
       Moscow for education. During university years I have started working as a
       software developer.
     </Text>
