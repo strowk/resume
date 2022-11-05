@@ -12,9 +12,9 @@ jobs:
         shell: bash
       - run: yarn build
         shell: bash
-      - run : git config user.name ci_builder
-        shell: bash
-      - run : git config user.email str.write@gmail.com
-        shell: bash
-      - run: yarn run deploy
-        shell: bash
+      - name: Deploy to Github Pages
+        run: |
+          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          yarn run deploy -u "github-actions-bot <support+actions@github.com>"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
