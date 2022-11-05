@@ -1,5 +1,7 @@
-import { SkillBadge } from "./skillbadges/SkillBadge";
+import { SkillBadgeWithLink } from "./skillbadges/SkillBadge";
 import { SkillBadgesGroup } from "./skillbadges/SkillBadgesGroup";
+import TechDetailed from "./techdetailed/TechDetailed";
+import { Text } from "../main/Text";
 
 export const TechnicalSkills = () => (
   <>
@@ -8,55 +10,60 @@ export const TechnicalSkills = () => (
     </h2> */}
 
     <SkillBadgesGroup name="Languages">
-      <SkillBadge value="Java"></SkillBadge>
-      <SkillBadge value="Typescript"></SkillBadge>
-      <SkillBadge value="Kotlin"></SkillBadge>
-      <SkillBadge value="Scala"></SkillBadge>
-      <SkillBadge value="Go"></SkillBadge>
-      <SkillBadge value="Rust"></SkillBadge>
-      <SkillBadge value="Lua"></SkillBadge>
+      <SkillBadgeWithLink value="Java"></SkillBadgeWithLink>
+      <SkillBadgeWithLink value="Typescript"></SkillBadgeWithLink>
+      <SkillBadgeWithLink value="Kotlin"></SkillBadgeWithLink>
+      <SkillBadgeWithLink value="Scala"></SkillBadgeWithLink>
+      <SkillBadgeWithLink value="Go"></SkillBadgeWithLink>
+      <SkillBadgeWithLink value="Rust"></SkillBadgeWithLink>
+      <SkillBadgeWithLink value="Lua"></SkillBadgeWithLink>
     </SkillBadgesGroup>
 
     <SkillBadgesGroup name="Frameworks">
-      <SkillBadge value="Spring Boot"></SkillBadge>
-      <SkillBadge value="React"></SkillBadge>
-      <SkillBadge value="Akka"></SkillBadge>
-      <SkillBadge value="vue.js"></SkillBadge>
-      <SkillBadge value="seed-rs"></SkillBadge>
+      <SkillBadgeWithLink value="Spring Boot"></SkillBadgeWithLink>
+      <SkillBadgeWithLink value="React"></SkillBadgeWithLink>
+      <SkillBadgeWithLink value="Akka"></SkillBadgeWithLink>
+      <SkillBadgeWithLink value="vue.js"></SkillBadgeWithLink>
+      <SkillBadgeWithLink value="seed-rs"></SkillBadgeWithLink>
     </SkillBadgesGroup>
 
     <SkillBadgesGroup name="Cloud">
-      <SkillBadge value="Docker"></SkillBadge>
-      <SkillBadge value="AWS"></SkillBadge>
-      <SkillBadge value="Kubernetes"></SkillBadge>
-      <SkillBadge value="terraform"></SkillBadge>
-      <SkillBadge value="Cloudformation"></SkillBadge>
-      <SkillBadge value="CDK"></SkillBadge>
+      <SkillBadgeWithLink value="Docker"></SkillBadgeWithLink>
+      <SkillBadgeWithLink value="AWS"></SkillBadgeWithLink>
+      <SkillBadgeWithLink value="Kubernetes"></SkillBadgeWithLink>
+      <SkillBadgeWithLink value="terraform"></SkillBadgeWithLink>
+      <SkillBadgeWithLink value="Cloudformation"></SkillBadgeWithLink>
+      <SkillBadgeWithLink value="CDK"></SkillBadgeWithLink>
     </SkillBadgesGroup>
 
     <SkillBadgesGroup name="Middleware">
-      <SkillBadge value="Kafka"></SkillBadge>
-      <SkillBadge value="Kafka Streams"></SkillBadge>
-      <SkillBadge value="RabbitMQ"></SkillBadge>
-      <SkillBadge value="AWS IoT"></SkillBadge>
-      <SkillBadge value="AWS IoT Core"></SkillBadge>
-      <SkillBadge value="LoraWAN"></SkillBadge>
+      <SkillBadgeWithLink value="Kafka"></SkillBadgeWithLink>
+      <SkillBadgeWithLink value="RabbitMQ"></SkillBadgeWithLink>
+      <SkillBadgeWithLink value="AWS IoT"></SkillBadgeWithLink>
+      <SkillBadgeWithLink value="LoraWAN"></SkillBadgeWithLink>
     </SkillBadgesGroup>
 
     <SkillBadgesGroup name="CI/CD">
-      <SkillBadge value="Gitlab"></SkillBadge>
-      <SkillBadge value="Jenkins"></SkillBadge>
-      <SkillBadge value="AWS Codepipeline"></SkillBadge>
-      <SkillBadge value="AWS Codebuild"></SkillBadge>
+      <SkillBadgeWithLink value="Gitlab"></SkillBadgeWithLink>
+      <SkillBadgeWithLink value="Jenkins"></SkillBadgeWithLink>
+      <SkillBadgeWithLink value="AWS Codepipeline"></SkillBadgeWithLink>
+      <SkillBadgeWithLink value="AWS Codebuild"></SkillBadgeWithLink>
     </SkillBadgesGroup>
 
     <SkillBadgesGroup name="Misc">
-      <SkillBadge value="Redux"></SkillBadge>
-      <SkillBadge value="MobX"></SkillBadge>
-      <SkillBadge value="Cypress"></SkillBadge>
-      <SkillBadge value="Junit"></SkillBadge>
-      <SkillBadge value="scalatest"></SkillBadge>
-      <SkillBadge value="arquillian"></SkillBadge>
+      <SkillBadgeWithLink value="Redux"></SkillBadgeWithLink>
+      <SkillBadgeWithLink value="MobX"></SkillBadgeWithLink>
+      <SkillBadgeWithLink value="Cypress"></SkillBadgeWithLink>
+      <SkillBadgeWithLink value="Junit"></SkillBadgeWithLink>
+      <SkillBadgeWithLink value="scalatest"></SkillBadgeWithLink>
+      <SkillBadgeWithLink value="arquillian"></SkillBadgeWithLink>
     </SkillBadgesGroup>
+
+    <Text>
+      This is not a complete list of technologies I have skills to work with, but just the ones most recent/relevant.
+      In a lot of situations I have found that having experience with similar tool is helping to quickly get used to another.
+    </Text>
+
+    <TechDetailed></TechDetailed>
   </>
 );

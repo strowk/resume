@@ -22,6 +22,11 @@ import { Nav } from "./Navigation";
 import { TechnicalSkills } from "../techstacks/Techstacks";
 import { useBreakpoint } from "../../hooks/UseBreakpoints";
 import { useLocation, useNavigate } from "react-router-dom";
+import {
+  PostAnimationHashContext,
+  PostAnimationHashProvider,
+  usePostAnimationHash,
+} from "../../hooks/UsePostAnimationHash";
 
 export interface Tab {
   title: string;
@@ -30,7 +35,6 @@ export interface Tab {
 }
 
 export const Data: FunctionComponent = () => {
-
   const tabs: Array<Tab> = [
     {
       title: "Tech",
@@ -69,31 +73,84 @@ export const Data: FunctionComponent = () => {
       route: "/about",
     },
   ];
+
   const [currentTab, setCurrentTab] = useState<number>(0);
-  const [newTab, setNewTab] = useState<number>(0);
   const [navSwiper, setNavSwiper] = useState<Swip | undefined>();
   const [swiper, setSwiper] = useState<Swip | undefined>();
+
+  return (
+    <PostAnimationHashProvider>
+      <TheSwiper
+        currentTab={currentTab}
+        swiper={swiper}
+        tabs={tabs}
+        setNavSwiper={setNavSwiper}
+        navSwiper={navSwiper}
+        setSwiper={setSwiper}
+        setCurrentTab={setCurrentTab}
+      ></TheSwiper>
+    </PostAnimationHashProvider>
+  );
+};
+
+const TheSwiper = ({
+  currentTab,
+  swiper,
+  tabs,
+  setNavSwiper,
+  navSwiper,
+  setSwiper,
+  setCurrentTab,
+}: {
+  currentTab: number;
+  swiper?: Swip;
+  tabs: Array<Tab>;
+  setNavSwiper: (swiper: Swip) => void;
+  navSwiper?: Swip;
+  setSwiper: (swiper: Swip) => void;
+  setCurrentTab: (num: number) => void;
+}) => {
   const location = useLocation();
-  const navigate = useNavigate();
-  const slideToLocation = (swiper?: Swip) => {
-    console.log(`nav is ${location.pathname}`)
-    let tabIndex = tabs.findIndex((tab)=> tab.route == location.pathname)
-    if (!swiper) {
-      console.log("too early to slide :(")
-    }
-    if (tabIndex >= 0) {
-      swiper?.slideTo(tabIndex);
-    }
-  }
+  const routingNavigate = useNavigate();
+
+  const [navigateOnSwipe, setNavigateOnSwipe] = useState<Boolean>(false);
+  const postAnimationHash = usePostAnimationHash();
 
   useEffect(() => {
-    slideToLocation(swiper)
-  }, [swiper, location])
-  
+    if (!navigateOnSwipe) {
+      setNavigateOnSwipe(true);
+      return;
+    }
+    let tab = tabs[currentTab];
+    console.log("navigating to", tab.route);
+    if (location.pathname !== tab.route) {
+      routingNavigate(tab.route);
+    }
+  }, [currentTab]);
+
+  const syncHash = () => {
+    if (postAnimationHash.hash !== location.hash) {
+      postAnimationHash.setHash(location.hash);
+    }
+  };
+
+  const slideToLocation = (swiper?: Swip) => {
+    console.log(`nav is ${location.pathname}`);
+    let tabIndex = tabs.findIndex((tab) => tab.route == location.pathname);
+    const goingToSlide = tabIndex >= 0 && currentTab !== tabIndex;
+    if (goingToSlide) {
+      swiper?.slideTo(tabIndex);
+    } else {
+      // when location has changed, but we do not need to slide there
+      // we need to immediately pass down new hash of location, because
+      // onSlideChangeTransitionEnd will not be called to sync hash post animation
+      syncHash(); 
+    }
+  };
+
   useEffect(() => {
-    let tab = tabs[currentTab]
-    navigate(tab.route)
-  }, [currentTab])
+    slideToLocation(swiper);
+  }, [swiper, location]);
 
   return (
     <>
@@ -105,6 +162,8 @@ export const Data: FunctionComponent = () => {
       />
       <Swiper
         modules={[Controller, EffectCoverflow]}
+        //
+        shortSwipes={false}
         spaceBetween={10}
         controller={{ control: navSwiper }}
         // simulateTouch={true}
@@ -116,6 +175,9 @@ export const Data: FunctionComponent = () => {
         onSwiper={(swiper) => {
           setSwiper(swiper);
         }}
+        onSlideChangeTransitionEnd={() => {
+          syncHash();
+        }}
         onSlideChange={(swiper) => {
           setCurrentTab(swiper.activeIndex);
         }}
@@ -124,13 +186,6 @@ export const Data: FunctionComponent = () => {
           <SwiperSlide key={tab.title}>{tab.node}</SwiperSlide>
         ))}
       </Swiper>
-      {/* <Swiping
-          currentTab={currentTab}
-          onChangeTab={setCurrentTab}
-          newTab={newTab}
-          onChangeNewTab={setNewTab}
-          tabs={tabs}
-        ></Swiping> */}
     </>
   );
 };

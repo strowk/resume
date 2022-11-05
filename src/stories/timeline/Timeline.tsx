@@ -26,6 +26,7 @@ import {
 } from "./Finished";
 import { TimelineLineSegment } from "./LineSegment";
 import { Card } from "./Card";
+import ReceivingScroll from "../../components/ReceivingScroll";
 
 export type TimelineItem =
   | SimpleTextTimelineItem
@@ -63,7 +64,7 @@ export const Entry = ({
     <div className="flex md:contents">
       <div
         className={`${
-          item.date || hideForMobile
+          item.date ? "" : hideForMobile
         } col-start-3 col-end-4 mr-10 ml-5 md:mx-auto relative`}
       >
         <TimelineLineSegment
@@ -72,14 +73,17 @@ export const Entry = ({
           iconTooltip={iconTooltip}
         />
       </div>
+
       <div className="col-start-4 col-end-11">
-        <Card
-          title={item.title}
-          text={item.text}
-          icon={icon}
-          iconTooltip={iconTooltip}
-          techs={isTimelineItemWithTechs(item) ? item.techs : undefined}
-        />
+        <ReceivingScroll id={item.title.toLowerCase().replaceAll(" ", "-")}>
+          <Card
+            title={item.title}
+            text={item.text}
+            icon={icon}
+            iconTooltip={iconTooltip}
+            techs={isTimelineItemWithTechs(item) ? item.techs : undefined}
+          />
+        </ReceivingScroll>
       </div>
     </div>
   );

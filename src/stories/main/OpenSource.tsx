@@ -1,4 +1,8 @@
-import { faGithub, faGitlab, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import {
+  faGithub,
+  faGitlab,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
 import {
   faArrowAltCircleUp,
   faBook,
@@ -19,7 +23,7 @@ const OpenSourceCard: FunctionComponent<{}> = ({ children }) => (
 
 export const OpenSource = () => (
   <div className="md:px-4 mx-1">
-    <Header3>Contributions</Header3>
+    <Header3 value="Contributions" />
     <Text>
       Features, bugfixes, libraries and tools contributed to already existing
       codebase or ecosystem.
@@ -149,7 +153,8 @@ export const OpenSource = () => (
         ></Card>
       </OpenSourceCard>
     </div>
-    <Header3>Pet Projects</Header3>
+
+    <Header3 value="Pet Projects" />
     <Text>
       A bunch of interesting tools and stuff I made for myself, others or just
       for fun. In my repositories you can find a lot of stuff that I tried, but
@@ -213,7 +218,7 @@ export const OpenSource = () => (
       </OpenSourceCard>
     </div>
 
-    <Header3>Games</Header3>
+    <Header3 value="Games" />
     <Text>
       At some point I wanted to try myself in game design and development and
       made a bunch of games and libraries (like packages) on a platform known as
@@ -296,7 +301,6 @@ export const OpenSource = () => (
         ></Card>
       </OpenSourceCard>
 
-      
       <OpenSourceCard>
         <Card
           title="Radar"

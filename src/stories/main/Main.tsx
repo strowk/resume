@@ -9,14 +9,16 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FunctionComponent, useState } from "react";
-import { Swiping } from "../../components/Swiping";
 import { TechnicalSkills } from "../techstacks/Techstacks";
 import { Card } from "../timeline/Card";
 import { Timeline } from "../timeline/Timeline";
+import { Text } from "./Text";
 
 import "./main.css";
 import photo from "./photo.jpg";
 import { Data } from "./Data";
+import ReceivingScroll from "../../components/ReceivingScroll";
+import { Link } from "react-router-dom";
 interface MainProps {}
 
 const TopSummary: FunctionComponent<{}> = () => (
@@ -32,17 +34,23 @@ const TopSummary: FunctionComponent<{}> = () => (
       <li>using DevOps practices and Agile methodology</li>
       <li>, with 8 years of working experience</li>
       <li>. Currently living in Munich (Germany)</li>
-      <li>and not looking for a job change</li>
+      <li>, not looking for a job change</li>
     </ul>
-    <div className="mt-3">
-      You can contact me via LinkedIn:
-      <p>
-        <a href="https://www.linkedin.com/in/sultanaev-timur" target={"_blank"}>
-          <FontAwesomeIcon icon={faLinkedin}></FontAwesomeIcon>{" "}
-          www.linkedin.com/in/sultanaev-timur
-        </a>
-      </p>
-    </div>
+    <ReceivingScroll id={"contacts"}>
+      <div className="mt-3 max-w-prose">
+        About all opportunities, job suggestions, etc, please contact me via
+        LinkedIn only:
+        <p>
+          <a
+            href="https://www.linkedin.com/in/sultanaev-timur"
+            target={"_blank"}
+          >
+            <FontAwesomeIcon icon={faLinkedin}></FontAwesomeIcon>{" "}
+            www.linkedin.com/in/sultanaev-timur
+          </a>
+        </p>
+      </div>
+    </ReceivingScroll>
   </section>
 );
 
@@ -66,15 +74,15 @@ export const Main = ({ ...props }: MainProps) => {
           <TechnicalSkills />
         </div> */}
 
-
-        <div className="bg-white dark:bg-gray-800 dark:text-gray-200 md:pt-6 md:rounded-tl-3xl"> 
-        {/* <div className="bg-white dark:bg-gray-800 dark:text-gray-200 md:pt-6">  */}
+        <div className="bg-white dark:bg-gray-800 dark:text-gray-200 md:pt-6 md:rounded-tl-3xl">
+          {/* <div className="bg-white dark:bg-gray-800 dark:text-gray-200 md:pt-6">  */}
           <Data />
+        </div>
+
+        <div>
+          <Link to="#contacts">Contacts</Link>
         </div>
       </div>
     </div>
   );
 };
-
-
-
