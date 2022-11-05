@@ -12,5 +12,9 @@ jobs:
         shell: bash
       - run: yarn build
         shell: bash
+      - run : git config user.name ci_builder
+        shell: bash
+      - run : git config user.email str.write@gmail.com
+        shell: bash
       - run: yarn run deploy
         shell: bash
