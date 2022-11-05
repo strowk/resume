@@ -1,0 +1,15 @@
+name: publish-to-github-pages
+run-name: Publishing React app to Github Pages
+on:
+  push:
+    branches: [ main ]
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+    - run : yarn install --frozen-lockfile
+      shell: bash
+    - run : yarn build
+      shell: bash
+    - run : yarn run deploy
+      shell: bash
