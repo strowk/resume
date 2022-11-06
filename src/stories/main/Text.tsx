@@ -47,41 +47,17 @@ export const Text: FunctionComponent<TextProps> = ({
   const comps: ReactMarkdownOptions["components"] = {
     a: ({ node, ...props }) => <CustomLink {...props} />,
   };
-  return (
-    <Focusable>
-      {text ? (
-        <ReactMarkdown
-          components={comps}
-          className="pb-4 max-w-prose mx-auto"
-          children={text}
-        ></ReactMarkdown>
-      ) : (
-        children && (
-          <ReactMarkdown
-            components={comps}
-            className="pb-4 max-w-prose mx-auto"
-          >
-            {children}
-          </ReactMarkdown>
-        )
-      )}
-    </Focusable>
-  );
-};
-
-export const Focusable: FunctionComponent = ({ children }) => {
-  const [isFocused, setIsFocused] = useState<boolean>(false);
-  const handleDoubleClick = () => {
-    setIsFocused((val) => !val);
-  };
-  return (
-    <div
-      onDoubleClick={handleDoubleClick}
-      className={`rounded-md p-2 ${
-        isFocused ? "swiper-no-swiping bg-gray-900" : "bg-gray-800"
-      }`}
-    >
-      {children}
-    </div>
+  return text ? (
+    <ReactMarkdown
+      components={comps}
+      className="pb-4 max-w-prose mx-auto"
+      children={text}
+    ></ReactMarkdown>
+  ) : (
+    (children && (
+      <ReactMarkdown components={comps} className="pb-4 max-w-prose mx-auto">
+        {children}
+      </ReactMarkdown>
+    )) || <></>
   );
 };
