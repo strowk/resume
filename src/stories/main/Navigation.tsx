@@ -39,7 +39,6 @@ export const Nav: FunctionComponent<NavProps> = ({
       <Swiper
         modules={[Controller]}
         onSwiper={setNavSwiper}
-        enabled={false}
         slidesPerView={isMiddle ? 3 : isSmall ? 2 : 1}
         //   controller={{ control: swiper }}
       >
