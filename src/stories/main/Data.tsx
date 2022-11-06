@@ -164,6 +164,7 @@ const TheSwiper = ({
         modules={[Controller, EffectCoverflow]}
         //
         shortSwipes={false}
+        allowTouchMove={false}
         spaceBetween={10}
         controller={{ control: navSwiper }}
         // simulateTouch={true}
