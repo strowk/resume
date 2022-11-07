@@ -69,18 +69,18 @@ export const Data: FunctionComponent = () => {
 
   return (
     <ScrollAnimationHashProvider>
-      <TheSwiper
+      <NavigatableContent
         currentTab={currentTab}
         tabs={tabs}
         setNavSwiper={setNavSwiper}
         navSwiper={navSwiper}
         setCurrentTab={setCurrentTab}
-      ></TheSwiper>
+      ></NavigatableContent>
     </ScrollAnimationHashProvider>
   );
 };
 
-const TheSwiper = ({
+const NavigatableContent = ({
   currentTab,
   tabs,
   setNavSwiper,
@@ -103,14 +103,15 @@ const TheSwiper = ({
     if (foundIndex >= 0 && foundIndex !== currentTab) {
       setCurrentTab(foundIndex);
     }
+    // syncing scroll animation position with location
+    if (scrollAnimationHash.hash !== location.hash) {
+      scrollAnimationHash.setHash(location.hash);
+    }
   }, [location]);
 
   useEffect(() => {
     // syncing navigation slider position when current tab has changed
     navSwiper?.slideTo(currentTab);
-    if (scrollAnimationHash.hash !== location.hash) {
-      scrollAnimationHash.setHash(location.hash);
-    }
   }, [currentTab]);
 
   // change routing to new tab by index
