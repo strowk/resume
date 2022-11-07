@@ -21,7 +21,7 @@ const OpenSourceCard: FunctionComponent<{}> = ({ children }) => (
   <div className="col-span-1 mx-2">{children}</div>
 );
 
-export const OpenSource = () => (
+export const SideGigs = () => (
   <div className="md:px-4 mx-1">
     <Header3 value="Contributions" />
     <Text>

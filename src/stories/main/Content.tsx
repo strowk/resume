@@ -7,7 +7,7 @@ import {
   EffectCube,
   EffectCoverflow,
 } from "swiper";
-import { OpenSource } from "./OpenSource";
+import { SideGigs } from "./SideGigs";
 import { History } from "./History";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -55,10 +55,10 @@ export const Data: FunctionComponent = () => {
       route: "/timeline",
     },
     {
-      title: "Open Source",
+      title: "Side Gigs",
       node: (
         <div className="bg-white dark:bg-gray-800 dark:text-gray-200 px-1 pb-4">
-          <OpenSource />
+          <SideGigs />
         </div>
       ),
       route: "/open-source",
