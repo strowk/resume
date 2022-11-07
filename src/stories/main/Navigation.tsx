@@ -84,7 +84,7 @@ const NavButton = ({
     className={`font-semibold py-1 px-4 ${
       !isCurrent && "text-gray-500"
       // (index === newTab ? "text-gray-400" : "text-gray-500")
-    } rounded-md transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 hover:text-gray-100 duration-300`}
+    } rounded-md mt-2 transition ease-in-out delay-50 hover:-translate-y-1 hover:bg-indigo-500 hover:text-gray-100 duration-300`}
     onClick={onClick}
     key={tab.title}
   >
@@ -110,7 +110,7 @@ const SlideButton = ({
   icon: IconDefinition;
 }) => (
   <button
-    className="md:mx-4 w-16 h-16 text-gray-500 rounded-md transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 hover:text-gray-100 duration-300"
+    className="md:mx-4 w-16 h-16 text-gray-500 rounded-md transition ease-in-out delay-50 hover:-translate-y-1 hover:bg-indigo-500 hover:text-gray-100 duration-300"
     onClick={onClick}
   >
     <FontAwesomeIcon icon={icon}></FontAwesomeIcon>
