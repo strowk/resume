@@ -38,7 +38,6 @@ export const Nav: FunctionComponent<NavProps> = ({
     <nav className="px-4 flex flex-row text-4xl text-center font-semibold pb-8 border-b-4 border-gray-900">
       <SlideButton
         onClick={() => {
-          // swiper?.slidePrev();
           moveToPreviousTab();
         }}
         icon={faAngleLeft}
@@ -47,17 +46,12 @@ export const Nav: FunctionComponent<NavProps> = ({
         modules={[Controller]}
         onSwiper={setNavSwiper}
         slidesPerView={isMiddle ? 3 : isSmall ? 2 : 1}
-        //   controller={{ control: swiper }}
       >
         {tabs.map((tab, index) => {
-          //   const b = useBreakpoint?.("sm");
-          // return <div>test</div>
           return (
             <SwiperSlide key={tab.title}>
-              {/* {b && "mobile"} */}
               <NavButton
                 onClick={() => {
-                  // swiper?.slideTo(index);
                   moveToTab(index);
                 }}
                 isCurrent={index === currentTab}
@@ -70,7 +64,6 @@ export const Nav: FunctionComponent<NavProps> = ({
       <SlideButton
         onClick={() => {
           moveToNextTab();
-          // swiper?.slideNext();
         }}
         icon={faAngleRight}
       />
