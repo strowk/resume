@@ -1,6 +1,6 @@
 import { createRef, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { usePostAnimationHash } from "../hooks/UsePostAnimationHash";
+import { useScrollAnimationHash } from "../hooks/UseScrollAnimationHash";
 
 const ReceivingScrollAbstract = ({
   id,
@@ -16,7 +16,6 @@ const ReceivingScrollAbstract = ({
     if (hashProvider.hash === `#${id}`) {
       let div = theref.current;
       if (div) {
-        console.log("scrolling into ", hashProvider.hash);
         div.scrollIntoView({ behavior: "smooth" });
       }
     }
@@ -51,11 +50,11 @@ export default (
     id: string;
   }>
 ) => {
-  const postAnimation = usePostAnimationHash();
-  return postAnimation.haveProvider ? (
+  const scrollAnimation = useScrollAnimationHash();
+  return scrollAnimation.haveProvider ? (
     <ReceivingScrollAbstract
       {...props}
-      hashProvider={postAnimation}
+      hashProvider={scrollAnimation}
     ></ReceivingScrollAbstract>
   ) : (
     <ReceivingScrollFromLocation {...props}></ReceivingScrollFromLocation>

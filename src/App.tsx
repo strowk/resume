@@ -1,12 +1,12 @@
 import { Main } from "./stories/main/Main";
-import { HashRouter } from "react-router-dom";
+import { HashRouter as UsedRouter } from "react-router-dom";
 
 function App() {
   return (
     <div>
-      <HashRouter>
+      <UsedRouter>
         <Main></Main>
-      </HashRouter>
+      </UsedRouter>
     </div>
   );
 }
