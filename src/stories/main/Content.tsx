@@ -21,7 +21,7 @@ import { About } from "./About";
 import { Nav } from "./Navigation";
 import { TechnicalSkills } from "../techstacks/Techstacks";
 import { useBreakpoint } from "../../hooks/UseBreakpoints";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import {
   PostAnimationHashContext,
   PostAnimationHashProvider,
@@ -144,7 +144,7 @@ const TheSwiper = ({
       // when location has changed, but we do not need to slide there
       // we need to immediately pass down new hash of location, because
       // onSlideChangeTransitionEnd will not be called to sync hash post animation
-      syncHash(); 
+      syncHash();
     }
   };
 
@@ -156,10 +156,26 @@ const TheSwiper = ({
     <>
       <Nav
         currentTab={currentTab}
-        swiper={swiper}
+        // swiper={swiper}
+        moveToNextTab={() => {
+          swiper?.slideNext();
+        }}
+        moveToPreviousTab={() => {
+          swiper?.slidePrev();
+        }}
+        moveToTab={(index) => {
+          swiper?.slideTo(index);
+        }}
         tabs={tabs}
         setNavSwiper={setNavSwiper}
       />
+
+      {/* <Routes>
+        {tabs.map((tab) => (
+          <Route path={tab.route} element={tab.node} />
+        ))}
+      </Routes> */}
+
       <Swiper
         modules={[Controller, EffectCoverflow]}
         //

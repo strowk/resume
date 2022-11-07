@@ -2,7 +2,7 @@ import { FunctionComponent } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft, IconDefinition } from "@fortawesome/free-solid-svg-icons";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
-import { Tab } from "./Data";
+import { Tab } from "./Content";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Swiper as Swip, Controller } from "swiper";
 import useBreakpoint from "use-breakpoint";
@@ -12,17 +12,23 @@ import "swiper/css";
 const BREAKPOINTS = { mobile: 0, tablet: 768, desktop: 1280 };
 
 interface NavProps {
-  swiper?: Swip;
+  // swiper?: Swip;
   currentTab: number;
   tabs: Array<Tab>;
   setNavSwiper: (swip: Swip) => void;
+  moveToNextTab: () => void;
+  moveToPreviousTab: () => void;
+  moveToTab: (index: number) => void;
 }
 
 export const Nav: FunctionComponent<NavProps> = ({
-  swiper,
+  // swiper,
   currentTab,
   tabs,
   setNavSwiper,
+  moveToNextTab,
+  moveToPreviousTab,
+  moveToTab,
 }: NavProps) => {
   const { breakpoint } = useBreakpoint(BREAKPOINTS);
   const isMiddle = breakpoint == "desktop";
@@ -32,7 +38,8 @@ export const Nav: FunctionComponent<NavProps> = ({
     <nav className="px-4 flex flex-row text-4xl text-center font-semibold pb-8 border-b-4 border-gray-900">
       <SlideButton
         onClick={() => {
-          swiper?.slidePrev();
+          // swiper?.slidePrev();
+          moveToPreviousTab();
         }}
         icon={faAngleLeft}
       />
@@ -50,7 +57,8 @@ export const Nav: FunctionComponent<NavProps> = ({
               {/* {b && "mobile"} */}
               <NavButton
                 onClick={() => {
-                  swiper?.slideTo(index);
+                  // swiper?.slideTo(index);
+                  moveToTab(index);
                 }}
                 isCurrent={index === currentTab}
                 tab={tab}
@@ -61,7 +69,8 @@ export const Nav: FunctionComponent<NavProps> = ({
       </Swiper>
       <SlideButton
         onClick={() => {
-          swiper?.slideNext();
+          moveToNextTab();
+          // swiper?.slideNext();
         }}
         icon={faAngleRight}
       />

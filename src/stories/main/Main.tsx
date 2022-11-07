@@ -16,7 +16,7 @@ import { Text } from "./Text";
 
 import "./main.css";
 import photo from "./photo.jpg";
-import { Data } from "./Data";
+import { Data } from "./Content";
 import ReceivingScroll from "../../components/ReceivingScroll";
 import { Link } from "react-router-dom";
 interface MainProps {}
