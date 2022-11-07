@@ -102,6 +102,7 @@ const NavigatableContent = ({
     const foundIndex = tabs.findIndex((it) => it.route === location.pathname);
     if (foundIndex >= 0 && foundIndex !== currentTab) {
       setCurrentTab(foundIndex);
+      navSwiper?.slideTo(currentTab);
     }
     // syncing scroll animation position with location
     if (scrollAnimationHash.hash !== location.hash) {
@@ -111,7 +112,9 @@ const NavigatableContent = ({
 
   useEffect(() => {
     // syncing navigation slider position when current tab has changed
-    navSwiper?.slideTo(currentTab);
+    if (navSwiper?.activeIndex !== currentTab) {
+      navSwiper?.slideTo(currentTab);
+    }
   }, [currentTab]);
 
   // change routing to new tab by index
