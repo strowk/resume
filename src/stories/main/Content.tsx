@@ -122,7 +122,6 @@ const TheSwiper = ({
       return;
     }
     let tab = tabs[currentTab];
-    console.log("navigating to", tab.route);
     if (location.pathname !== tab.route) {
       routingNavigate(tab.route);
     }
@@ -152,31 +151,47 @@ const TheSwiper = ({
     slideToLocation(swiper);
   }, [swiper, location]);
 
+  const moveToTab = (index: number) => {
+    const tab = tabs.at(index);
+
+    if (tab) {
+      routingNavigate(tab.route);
+      setCurrentTab(index);
+      navSwiper?.slideTo(index);
+    }
+  };
+
   return (
     <>
       <Nav
         currentTab={currentTab}
         // swiper={swiper}
         moveToNextTab={() => {
-          swiper?.slideNext();
+          // swiper?.slideNext();
+          const newTab = currentTab + 1;
+          if (newTab < tabs.length) {
+            moveToTab(newTab);
+          }
         }}
         moveToPreviousTab={() => {
-          swiper?.slidePrev();
+          // swiper?.slidePrev();
+          const newTab = currentTab - 1;
+          if (newTab >= 0) {
+            moveToTab(newTab);
+          }
         }}
-        moveToTab={(index) => {
-          swiper?.slideTo(index);
-        }}
+        moveToTab={moveToTab}
         tabs={tabs}
         setNavSwiper={setNavSwiper}
       />
 
-      {/* <Routes>
+      <Routes>
         {tabs.map((tab) => (
           <Route path={tab.route} element={tab.node} />
         ))}
-      </Routes> */}
+      </Routes>
 
-      <Swiper
+      {/* <Swiper
         modules={[Controller, EffectCoverflow]}
         //
         shortSwipes={false}
@@ -202,7 +217,7 @@ const TheSwiper = ({
         {tabs.map((tab) => (
           <SwiperSlide key={tab.title}>{tab.node}</SwiperSlide>
         ))}
-      </Swiper>
+      </Swiper> */}
     </>
   );
 };
