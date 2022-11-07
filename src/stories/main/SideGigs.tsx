@@ -13,6 +13,7 @@ import {
   faLink,
   faSlidersH,
 } from "@fortawesome/free-solid-svg-icons";
+import React from "react";
 import { FunctionComponent } from "react";
 import { Card } from "../timeline/Card";
 import { Header3, Text } from "./Text";
@@ -21,7 +22,7 @@ const OpenSourceCard: FunctionComponent<{}> = ({ children }) => (
   <div className="col-span-1 mx-2">{children}</div>
 );
 
-export const SideGigs = () => (
+const SideGigs = () => (
   <div className="md:px-4 mx-1">
     <Header3 value="Contributions" />
     <Text>
@@ -372,3 +373,5 @@ export const SideGigs = () => (
     </div>
   </div>
 );
+
+export default React.memo(SideGigs);

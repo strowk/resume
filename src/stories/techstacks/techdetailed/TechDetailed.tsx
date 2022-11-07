@@ -1,3 +1,4 @@
+import React from "react";
 import { createRef, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import ReceivingScroll from "../../../components/ReceivingScroll";
@@ -252,7 +253,8 @@ developers, I would prefer to use React.
 
       <ReceivingScroll id="docker">
         <TechItemDetailed title="Docker">
-          <Text text={`
+          <Text
+            text={`
 I used docker in some or other capacity now routinely in almost every project in the last 6 or so years.
 I have experience using docker for delivery and running of backend services, for containerized CI/CD
 and just simply for quickly getting a necessary technology I need to test on my machine.
@@ -261,13 +263,15 @@ When making local environments I prefer using docker-compose. In couple of proje
 experience of making production-grade images specific for Java using jib library. I also have some 
 experience making multi-stage builds with statically compiled Golang-based images. Though I prefer 
 images to be based on alpine, in certain situations I have made some images from scratch base.
-`}></Text>
+`}
+          ></Text>
         </TechItemDetailed>
       </ReceivingScroll>
 
       <ReceivingScroll id="aws">
         <TechItemDetailed title="AWS">
-          <Text text={`
+          <Text
+            text={`
 I have extensive experience working with various AWS services, such as ECS (Fargate or EC2 based),
 EKS, DynamoDB, RDS (usually Postgres, Aurora), Lambda, Cloudformation, S3, MSK, API Gateway and others. 
 
@@ -278,13 +282,15 @@ or AWS CLI, depending on the task at hand.
 When I can intergate with AWS from different systems, for example here you can see the 
 [PR I made for jenkins plugin](https://github.com/jenkinsci/pipeline-aws-plugin/pull/251), 
 which had issues when I was rolling out project infrastructure on China partition.
-`}></Text>
+`}
+          ></Text>
         </TechItemDetailed>
       </ReceivingScroll>
 
       <ReceivingScroll id="kubernetes">
         <TechItemDetailed title="Kubernetes">
-          <Text text={`
+          <Text
+            text={`
 I am a certified Kubernetes administrator (CKA by CNCF). 
 
 I started working with Kubernetes under Openshift some years ago and since then used it in
@@ -297,36 +303,42 @@ help other do the same in k8s environment. I have certain experience in helm, in
 [open source contribution](https://github.com/coder/code-server/pull/3393) to one of public charts. 
 On most of projects with k8s I would use helm for managing IaC, sometimes combined with 
 terraform. I have used kustomize as well once. 
-`}></Text>
+`}
+          ></Text>
         </TechItemDetailed>
       </ReceivingScroll>
 
       <ReceivingScroll id="terraform">
         <TechItemDetailed title="Terraform">
-          <Text text={`
+          <Text
+            text={`
 I have been using terraform on a several projects, sometimes defining all resources directly
 (with help of providers of course), sometimes through public modules. I can design IaC of any
 complexity using terraform, analyze and fix any issues that could happen (f.e. figure out
 what to do when state management got fixed on lock being stuck due to ungraceful termination, etc).
-`}></Text>
+`}
+          ></Text>
         </TechItemDetailed>
       </ReceivingScroll>
 
       <ReceivingScroll id="cloudformation">
         <TechItemDetailed title="Cloudformation">
-          <Text text={`
+          <Text
+            text={`
 I have been using vanilla Cloudformation via standard YAML templates on several projects,
 though nowadays I would prefer to describe CF based IaC using CDK. I can support complex 
 stacks if needed, correct any issues, like stacks stuck in UPDATE_ROLLBACK_FAILED state.
 In different projects I have experience of defininig stacks with ECS services, RDS databases,
 S3 buckets, MSK clusters, API Gateways, etc.
-`}></Text>
+`}
+          ></Text>
         </TechItemDetailed>
       </ReceivingScroll>
 
       <ReceivingScroll id="cdk">
         <TechItemDetailed title="CDK">
-          <Text text={`
+          <Text
+            text={`
 Mostly I have experience with CDK via Typescript, though I have tried couple of times
 Java-based CDK apps as well. I used CDK on two different projects and found it
 one of the most convenient tools for IaC so far, except for its vendor-lock on AWS.
@@ -334,13 +346,15 @@ I have experience making CDK based Codepipelines in AWS deploying Fargate servic
 with databases in RDS and/or DynamoDB as well as serverless applications on AWS Lambda, 
 using escape-hatches to adjust resources with AOP when needed, defining custom resources,
 such as f.e. Datadog monitors tracking some of metrics from AWS, or Kafka topics, etc.
-`}></Text>
+`}
+          ></Text>
         </TechItemDetailed>
       </ReceivingScroll>
 
       <ReceivingScroll id="kafka">
         <TechItemDetailed title="Kafka">
-          <Text text={`
+          <Text
+            text={`
 Almost all IoT projects I have been working so far had been using Kafka as a bus
 for devices to write to and services to communicate with each other. I have some experience
 of using Event Sourcing approach on Kafka as well, though not so extensive.
@@ -353,13 +367,15 @@ kafka-topics, kafka-consumer-groups or kcat (kafkacat). I understand core concep
 as topics, partitions, consumer groups, rebalancing, keys, etc. I am able to diagnose 
 and fix common issues of various complexity, such as f.e. slow consumer causing offset
 commits to fail due to client missing hearbeat after timeout on batch processing and such.
-`}></Text>
+`}
+          ></Text>
         </TechItemDetailed>
       </ReceivingScroll>
 
       <ReceivingScroll id="rabbitmq">
         <TechItemDetailed title="RabbitMQ">
-          <Text text={`
+          <Text
+            text={`
 I have used RabbitMQ on several projects, I am used to designing structure of exchanges
 and queues from scratch as well as getting into existing structure if needed. 
 I prefer to keep somewhere well documented structure connecting exchanges and 
@@ -379,13 +395,15 @@ about changed roles through the same RabbitMQ, though on separately secured host
 Ensuring that whole system was properly secured, including configuring the right
 access within RabbitMQ itself, creating users within RabbitMQ corresponding to 
 OIDC registered users in Keycloak, and so on - was quite a challenge.
-`}></Text>
+`}
+          ></Text>
         </TechItemDetailed>
       </ReceivingScroll>
 
       <ReceivingScroll id="aws-iot">
         <TechItemDetailed title="AWS IoT">
-          <Text text={`
+          <Text
+            text={`
 I only have a passing experience with AWS IoT in two projects, which I have not
 been involved in 100 percent. One of those was workshop for students, where AWS
 IoT was used to expose secured MQTT broker connecting to Raspberry PI device,
@@ -398,7 +416,8 @@ where I was helping another colleague to figure out how AWS Greengrass is workin
 and establish testing bench for experiments with that system. I was doing it maybe
 for several days, it was kinda fun. I had some experience with Azure IoT Edge,
 so I partly knew what to expect, though some AWS specifics took time to adjust to.
-`}></Text>
+`}
+          ></Text>
         </TechItemDetailed>
       </ReceivingScroll>
 
@@ -483,4 +502,4 @@ const TechItemDetailed = ({
   </>
 );
 
-export default TechDetailed;
+export default React.memo(TechDetailed);

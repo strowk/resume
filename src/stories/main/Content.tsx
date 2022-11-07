@@ -1,7 +1,7 @@
 import { FunctionComponent, useEffect, useState } from "react";
 import { Swiper as Swip } from "swiper";
-import { SideGigs } from "./SideGigs";
-import { History } from "./History";
+import SideGigs from "./SideGigs";
+import History from "./History";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-cards";
@@ -9,7 +9,7 @@ import "swiper/css/effect-cube";
 import "swiper/css/effect-coverflow";
 
 import "./main.css";
-import { About } from "./About";
+import About from "./About";
 import { Nav } from "./Navigation";
 import { TechnicalSkills } from "../techstacks/Techstacks";
 import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
