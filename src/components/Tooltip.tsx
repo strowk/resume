@@ -1,5 +1,5 @@
 import { Placement } from "@popperjs/core";
-import React, { FunctionComponent, useEffect, useState } from "react";
+import { FunctionComponent, useEffect, useState } from "react";
 import { usePopper } from "react-popper";
 
 export const Tooltip: FunctionComponent<{

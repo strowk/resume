@@ -1,5 +1,5 @@
-import { FunctionComponent, useState } from "react";
-import ReactMarkdown, { Options } from "react-markdown";
+import { FunctionComponent } from "react";
+import ReactMarkdown from "react-markdown";
 import { ReactMarkdownOptions } from "react-markdown/lib/react-markdown";
 import { Link } from "react-router-dom";
 import ReceivingScroll from "../../components/ReceivingScroll";
@@ -45,7 +45,7 @@ export const Text: FunctionComponent<TextProps> = ({
   children,
 }: TextProps) => {
   const comps: ReactMarkdownOptions["components"] = {
-    a: ({ node, ...props }) => <CustomLink {...props} />,
+    a: ({ ...props }) => <CustomLink {...props} />,
   };
   return text ? (
     <ReactMarkdown

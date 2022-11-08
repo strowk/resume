@@ -1,6 +1,4 @@
 import React from "react";
-import { createRef, useEffect } from "react";
-import { useLocation } from "react-router-dom";
 import ReceivingScroll from "../../../components/ReceivingScroll";
 import { Text } from "../../main/Text";
 

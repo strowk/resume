@@ -1,24 +1,18 @@
-import {
-  faGithub,
-  faGitlab,
-  faLinkedin,
-} from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faGitlab } from "@fortawesome/free-brands-svg-icons";
 import {
   faArrowAltCircleUp,
   faBook,
   faCheckCircle,
   faCoffee,
-  faDemocrat,
   faGamepad,
   faLink,
-  faSlidersH,
 } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 import { FunctionComponent } from "react";
 import { Card } from "../timeline/Card";
 import { Header3, Text } from "./Text";
 
-const OpenSourceCard: FunctionComponent<{}> = ({ children }) => (
+const OpenSourceCard: FunctionComponent = ({ children }) => (
   <div className="col-span-1 mx-2">{children}</div>
 );
 

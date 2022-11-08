@@ -14,7 +14,7 @@ const ReceivingScrollAbstract = ({
 
   const apply = (hashProvider: { hash: string }) => {
     if (hashProvider.hash === `#${id}`) {
-      let div = theref.current;
+      const div = theref.current;
       if (div) {
         div.scrollIntoView({ behavior: "smooth" });
       }

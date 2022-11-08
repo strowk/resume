@@ -42,11 +42,15 @@ export interface SimpleTextTimelineItem {
   date?: Date;
 }
 
-export interface TimelineItemWithTechs {
+export interface ItemWithTechs {
   techs: string[];
 }
 
-const isTimelineItemWithTechs = (o: any): o is TimelineItemWithTechs => {
+type TimelineItemWithTechs = TimelineItem & ItemWithTechs;
+
+const isTimelineItemWithTechs = (
+  o: TimelineItem
+): o is TimelineItemWithTechs => {
   return "techs" in o;
 };
 
@@ -59,7 +63,7 @@ export const Entry = ({
   icon: IconDefinition;
   iconTooltip: string;
 }) => {
-  let hideForMobile = "hidden md:block";
+  const hideForMobile = "hidden md:block";
   return (
     <div className="flex md:contents">
       <div

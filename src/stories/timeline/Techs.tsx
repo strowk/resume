@@ -43,7 +43,7 @@ export const Techs = ({ techs }: { techs: string[] }) => {
 
 const takeEnoughToFit = (techs: string[], width: number) => {
   const limit = width / 25;
-  var countedChars = 0;
+  let countedChars = 0;
   return techs.filter((it) => {
     countedChars += it.length;
     return countedChars < limit;

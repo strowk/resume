@@ -1,15 +1,14 @@
 import { createContext, useContext, useState, useEffect } from "react";
 
-const startingState = {
+const startingState: ScrollAnimationHashState = {
   haveProvider: false,
   hash: "",
-  setHash: (value: string) => {},
 };
 
 export interface ScrollAnimationHashState {
   haveProvider: boolean;
   hash: string;
-  setHash: (value: string) => void;
+  setHash?: (value: string) => void;
 }
 
 export const ScrollAnimationHashContext = createContext(startingState);

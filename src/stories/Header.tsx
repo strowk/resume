@@ -1,10 +1,8 @@
-import React from "react";
-
 import { Button } from "./Button";
 import "./header.css";
 
 interface HeaderProps {
-  user?: {};
+  user?: Record<string, string>;
   onLogin: () => void;
   onLogout: () => void;
   onCreateAccount: () => void;

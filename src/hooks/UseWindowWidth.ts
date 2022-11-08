@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 
 const debounce = (fn: () => void, ms: number) => {
-  let timer: number | undefined;
+  let timer: ReturnType<typeof setTimeout> | undefined;
   return () => {
-    clearTimeout(timer);
-    timer = setTimeout((_) => {
+    timer && clearTimeout(timer);
+    timer = setTimeout(() => {
       timer = undefined;
       fn();
     }, ms);

@@ -1,8 +1,8 @@
 import { faCoffee } from "@fortawesome/free-solid-svg-icons";
-import { TimelineItemWithTechs } from "./Timeline";
+import { ItemWithTechs } from "./Timeline";
 import { Entry, SimpleTextTimelineItem, TimelineItem } from "./Timeline";
 
-export type ProjectTimelineItem = TimelineItemWithTechs &
+export type ProjectTimelineItem = ItemWithTechs &
   SimpleTextTimelineItem & {
     type: "project";
   };

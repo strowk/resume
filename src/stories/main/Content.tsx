@@ -124,7 +124,7 @@ const NavigatableContent = ({
     }
     // syncing scroll animation position with location
     if (scrollAnimationHash.hash !== location.hash) {
-      scrollAnimationHash.setHash(location.hash);
+      scrollAnimationHash.setHash && scrollAnimationHash.setHash(location.hash);
     }
   }, [location]);
 

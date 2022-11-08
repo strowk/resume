@@ -7,9 +7,8 @@ import photo from "./photo.jpg";
 import { Data } from "./Content";
 import ReceivingScroll from "../../components/ReceivingScroll";
 import { Link } from "react-router-dom";
-interface MainProps {}
 
-const TopSummary: FunctionComponent<{}> = () => (
+const TopSummary: FunctionComponent = () => (
   <section className="p-6 rounded-tl-3xl bg-gray-800 overflow-x-clip">
     <h3 className="pt-5 pb-3 text-lg leading-6 font-medium text-gray-900 dark:text-gray-100">
       Timur Sultanaev is
@@ -41,7 +40,7 @@ const TopSummary: FunctionComponent<{}> = () => (
   </section>
 );
 
-export const Main = ({ ...props }: MainProps) => {
+export const Main = ({ ...props }: Record<string, never>) => {
   return (
     <div className="bg-gray-50 dark:bg-gray-900" {...props}>
       <div className="container mx-auto">

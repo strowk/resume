@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const badge = (value: string) => (
   <span className="inline-flex items-center justify-center px-4 py-1 mt-1 mr-2 font-bold text-md text-white bg-blue-600 rounded-full">
