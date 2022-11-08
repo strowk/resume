@@ -29,7 +29,10 @@ export const Data: FunctionComponent = () => {
     {
       title: "Tech",
       node: (
-        <div className="animate-fade-in bg-white dark:bg-gray-800 dark:text-gray-200 px-1 pb-4 pt-4">
+        <div
+          key="tech-skills"
+          className="animate-fade-in bg-white dark:bg-gray-800 dark:text-gray-200 px-1 pb-4 pt-4"
+        >
           <TechnicalSkills />
         </div>
       ),
@@ -38,10 +41,11 @@ export const Data: FunctionComponent = () => {
     {
       title: "Timeline",
       node: (
-        <div>
-          <div className="animate-fade-in bg-white dark:bg-gray-800 dark:text-gray-200 px-1 pb-4">
-            <History />
-          </div>
+        <div
+          key="history"
+          className="animate-fade-in bg-white dark:bg-gray-800 dark:text-gray-200 px-1 pb-4"
+        >
+          <History />
         </div>
       ),
       route: "/timeline",
@@ -49,12 +53,11 @@ export const Data: FunctionComponent = () => {
     {
       title: "Side Gigs",
       node: (
-        <div>
-          <div>
-            <div className="animate-fade-in bg-white dark:bg-gray-800 dark:text-gray-200 px-1 pb-4">
-              <SideGigs />
-            </div>
-          </div>
+        <div
+          key="side-gigs"
+          className="animate-fade-in bg-white dark:bg-gray-800 dark:text-gray-200 px-1 pb-4"
+        >
+          <SideGigs />
         </div>
       ),
       route: "/open-source",
@@ -62,14 +65,11 @@ export const Data: FunctionComponent = () => {
     {
       title: "About",
       node: (
-        <div>
-          <div>
-            <div>
-              <div className="animate-fade-in bg-white dark:bg-gray-800 dark:text-gray-200 px-4 pb-4">
-                <About />
-              </div>
-            </div>
-          </div>
+        <div
+          key="about"
+          className="animate-fade-in bg-white dark:bg-gray-800 dark:text-gray-200 px-4 pb-4"
+        >
+          <About />
         </div>
       ),
       route: "/about",
