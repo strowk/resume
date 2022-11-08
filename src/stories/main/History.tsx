@@ -5,6 +5,19 @@ const History = () => (
   <Timeline
     items={[
       {
+        type: "project",
+        title: "Facility Management",
+        text: "Tracking of tickets to manage offices and other facilities",
+        techs: [
+          "Typescript",
+          "Angular",
+          "NodeJS",
+          "Azure",
+          "Azure Devops",
+          "Kubernetes",
+        ],
+      },
+      {
         type: "upgrade",
         title: "Promoted to Senior Consultant",
         text: "",
