@@ -11,7 +11,9 @@
     "format": "prettier --write .",
     "deploy": "gh-pages -d dist",
     "postinstall": "husky install",
-    "lint-staged": "lint-staged"
+    "lint-staged": "lint-staged",
+    "lint": "eslint . --ext .ts --ext .tsx",
+    "lint:fix": "eslint . --ext .ts --ext .tsx --fix"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
@@ -38,9 +40,15 @@
     "@storybook/react": "^6.5.0-alpha.4",
     "@types/react": "^17.0.33",
     "@types/react-dom": "^17.0.10",
+    "@typescript-eslint/eslint-plugin": "^5.42.1",
+    "@typescript-eslint/parser": "^5.42.1",
     "@vitejs/plugin-react": "^1.0.7",
     "autoprefixer": "^10.4.0",
     "babel-loader": "^8.2.3",
+    "eslint": "^8.27.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.31.10",
     "gh-pages": "^4.0.0",
     "husky": "^8.0.2",
     "lint-staged": "^13.0.3",
@@ -52,6 +60,9 @@
     "vite": "^2.7.2"
   },
   "lint-staged": {
-    "*.ts": "prettier --write"
+    "*.(ts|tsx)": [
+      "prettier --write",
+      "eslint --fix"
+    ]
   }
 }
