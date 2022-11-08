@@ -109,12 +109,18 @@ const NavigatableContent = ({
   const routingNavigate = useNavigate();
   const scrollAnimationHash = useScrollAnimationHash();
 
+  const syncNavToTabIndex = (newTab: number) => {
+    if (navSwiper?.activeIndex !== newTab) {
+      navSwiper?.slideTo(newTab);
+    }
+  };
+
   useEffect(() => {
     // syncing currentTab with location if route has changed
     const foundIndex = tabs.findIndex((it) => it.route === location.pathname);
     if (foundIndex >= 0 && foundIndex !== currentTab) {
       setCurrentTab(foundIndex);
-      navSwiper?.slideTo(currentTab);
+      syncNavToTabIndex(foundIndex);
     }
     // syncing scroll animation position with location
     if (scrollAnimationHash.hash !== location.hash) {
@@ -123,10 +129,7 @@ const NavigatableContent = ({
   }, [location]);
 
   useEffect(() => {
-    // syncing navigation slider position when current tab has changed
-    if (navSwiper?.activeIndex !== currentTab) {
-      navSwiper?.slideTo(currentTab);
-    }
+    syncNavToTabIndex(currentTab);
   }, [currentTab]);
 
   // change routing to new tab by index
