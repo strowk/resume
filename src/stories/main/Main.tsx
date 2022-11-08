@@ -1,18 +1,6 @@
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import {
-  faArrowAltCircleUp,
-  faBook,
-  faCheckCircle,
-  faCoffee,
-  faGamepad,
-  faSlidersH,
-} from "@fortawesome/free-solid-svg-icons";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { FunctionComponent, useState } from "react";
-import { TechnicalSkills } from "../techstacks/Techstacks";
-import { Card } from "../timeline/Card";
-import { Timeline } from "../timeline/Timeline";
-import { Text } from "./Text";
+import { FunctionComponent } from "react";
 
 import "./main.css";
 import photo from "./photo.jpg";
@@ -29,12 +17,11 @@ const TopSummary: FunctionComponent<{}> = () => (
     <ul className="list-disc list-inside text-gray-700 dark:text-gray-200">
       <li>a full-stack developer</li>
       <li>
-        , who is focused on complete cycle of delivering cloud-based services
+        who is focused on complete cycle of delivering cloud-based services
       </li>
       <li>using DevOps practices and Agile methodology</li>
-      <li>, with 8 years of working experience</li>
-      <li>. Currently living in Munich (Germany)</li>
-      <li>, not looking for a job change</li>
+      <li>with 8 years of working experience</li>
+      <li>currently living in Munich</li>
     </ul>
     <ReceivingScroll id={"contacts"}>
       <div className="mt-3 max-w-prose">
@@ -70,15 +57,9 @@ export const Main = ({ ...props }: MainProps) => {
           </div>
         </div>
 
-        {/* <div className="bg-white dark:bg-gray-800 dark:text-gray-200 p-2 md:rounded-tl-3xl">
-          <TechnicalSkills />
-        </div> */}
-
         <div className="bg-white dark:bg-gray-800 dark:text-gray-200 md:pt-6 md:rounded-tl-3xl">
-          {/* <div className="bg-white dark:bg-gray-800 dark:text-gray-200 md:pt-6">  */}
           <Data />
         </div>
-
         <div>
           <Link to="#contacts">Contacts</Link>
         </div>
