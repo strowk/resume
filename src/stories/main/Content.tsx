@@ -29,7 +29,7 @@ export const Data: FunctionComponent = () => {
     {
       title: "Tech",
       node: (
-        <div className="bg-white dark:bg-gray-800 dark:text-gray-200 px-1 pb-4 pt-4">
+        <div className="animate-fade-in bg-white dark:bg-gray-800 dark:text-gray-200 px-1 pb-4 pt-4">
           <TechnicalSkills />
         </div>
       ),
@@ -38,8 +38,10 @@ export const Data: FunctionComponent = () => {
     {
       title: "Timeline",
       node: (
-        <div className="bg-white dark:bg-gray-800 dark:text-gray-200 px-1 pb-4">
-          <History />
+        <div>
+          <div className="animate-fade-in bg-white dark:bg-gray-800 dark:text-gray-200 px-1 pb-4">
+            <History />
+          </div>
         </div>
       ),
       route: "/timeline",
@@ -47,8 +49,12 @@ export const Data: FunctionComponent = () => {
     {
       title: "Side Gigs",
       node: (
-        <div className="bg-white dark:bg-gray-800 dark:text-gray-200 px-1 pb-4">
-          <SideGigs />
+        <div>
+          <div>
+            <div className="animate-fade-in bg-white dark:bg-gray-800 dark:text-gray-200 px-1 pb-4">
+              <SideGigs />
+            </div>
+          </div>
         </div>
       ),
       route: "/open-source",
@@ -56,8 +62,14 @@ export const Data: FunctionComponent = () => {
     {
       title: "About",
       node: (
-        <div className="bg-white dark:bg-gray-800 dark:text-gray-200 px-4 pb-4">
-          <About />
+        <div>
+          <div>
+            <div>
+              <div className="animate-fade-in bg-white dark:bg-gray-800 dark:text-gray-200 px-4 pb-4">
+                <About />
+              </div>
+            </div>
+          </div>
         </div>
       ),
       route: "/about",

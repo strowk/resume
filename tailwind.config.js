@@ -5,7 +5,17 @@ module.exports = {
   content: [],
   darkMode: "class", // or 'media' or 'class'
   theme: {
-    extend: {}
+    extend: {
+      animation: {
+        "fade-in": "fadeIn 0.4s ease-in-out",
+      },
+      keyframes: () => ({
+        fadeIn: {
+          "0%": { opacity: 0 },
+          "100%": { opacity: 1 },
+        },
+      }),
+    },
     // screens: require("./tailwind.screens")
   },
   plugins: [],
