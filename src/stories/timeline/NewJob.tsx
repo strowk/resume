@@ -12,5 +12,5 @@ export const isNewJobTimelineItem = (
 };
 
 export const NewJobEntry = ({ item }: { item: TimelineItem }) => {
-  return <Entry item={item} icon={faBriefcase} iconTooltip="New Job"  />;
+  return <Entry item={item} icon={faBriefcase} iconTooltip="New Job" />;
 };

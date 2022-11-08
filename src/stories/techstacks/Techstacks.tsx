@@ -60,8 +60,10 @@ export const TechnicalSkills = () => (
     </SkillBadgesGroup>
 
     <Text>
-      This is not a complete list of technologies I have skills to work with, but just the ones most recent/relevant.
-      In a lot of situations I have found that having experience with similar tool is helping to quickly get used to another.
+      This is not a complete list of technologies I have skills to work with,
+      but just the ones most recent/relevant. In a lot of situations I have
+      found that having experience with similar tool is helping to quickly get
+      used to another.
     </Text>
 
     <TechDetailed></TechDetailed>

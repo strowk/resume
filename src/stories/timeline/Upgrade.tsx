@@ -13,5 +13,7 @@ export const isUpgradeTimelineItem = (
 };
 
 export const UpgradeEntry = ({ item }: { item: UpgradeTimelineItem }) => {
-  return <Entry item={item} icon={faArrowAltCircleUp} iconTooltip={item.tooltip} />;
+  return (
+    <Entry item={item} icon={faArrowAltCircleUp} iconTooltip={item.tooltip} />
+  );
 };
