@@ -60,7 +60,7 @@ export const Data: FunctionComponent = () => {
           <SideGigs />
         </div>
       ),
-      route: "/open-source",
+      route: "/sides",
     },
     {
       title: "About",
