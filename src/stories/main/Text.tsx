@@ -17,6 +17,19 @@ export const Header3: FunctionComponent<{ value?: string }> = ({
   </h3>
 );
 
+export const Header4: FunctionComponent<{ value?: string }> = ({
+  value,
+  children,
+}) => (
+  <h4 className="font-semibold text-lg mb-1">
+    {value ? (
+      <ReceivingScroll id={value.toLowerCase()}>{value}</ReceivingScroll>
+    ) : (
+      children
+    )}
+  </h4>
+);
+
 type linkType = React.DetailedHTMLProps<
   React.AnchorHTMLAttributes<HTMLAnchorElement>,
   HTMLAnchorElement
