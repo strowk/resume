@@ -174,8 +174,8 @@ const SideGigs = () => (
       </OpenSourceCard>
       <OpenSourceCard>
         <Card
-          title="trustmatrix: Evolutionary simultaion of Prisoner's Dilemma"
-          text=""
+          title="trustmatrix"
+          text="Evolutionary simultaion of Prisoner's Dilemma"
           icon={faCoffee}
           iconTooltip="Project"
           techs={["Kotlin", "Game theory", "Gitlab CI"]}
