@@ -161,7 +161,7 @@ const SideGigs = () => (
           title="Compose for Git"
           text="CLI tool and plugins to manage several local git repositories described in one yaml file"
           icon={faCoffee}
-          iconTooltip="Project"
+          iconTooltip="CLI Tool"
           techs={[
             "Golang",
             "Git",
@@ -177,7 +177,7 @@ const SideGigs = () => (
           title="trustmatrix"
           text="Evolutionary simultaion of Prisoner's Dilemma"
           icon={faCoffee}
-          iconTooltip="Project"
+          iconTooltip="Research Project"
           techs={["Kotlin", "Game theory", "Gitlab CI"]}
           forceIcon={true}
           links={[
@@ -190,6 +190,23 @@ const SideGigs = () => (
               url: "https://strwrite.gitlab.io/trustmatrix/",
               title: "Demo",
               icon: faLink,
+            },
+          ]}
+        ></Card>
+      </OpenSourceCard>
+      <OpenSourceCard>
+        <Card
+          title="probranchinator"
+          text="Display status of conflicts between git branches in terminal"
+          icon={faCoffee}
+          iconTooltip="CLI Tool"
+          techs={["Rust", "clap-rs", "Git"]}
+          forceIcon={true}
+          links={[
+            {
+              url: "https://github.com/strowk/probranchinator",
+              title: "Repo",
+              icon: faGithub,
             },
           ]}
         ></Card>

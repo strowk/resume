@@ -43,7 +43,15 @@ const History = () => (
         type: "project",
         title: "Vehicle Telemetry Collection",
         text: "Stream processing of telemetry from millions of cars",
-        techs: ["Scala", "Akka", "Kafka Streams", "React", "Javascript"],
+        techs: [
+          "Scala",
+          "Akka",
+          "Kafka Streams",
+          "React",
+          "Javascript",
+          "AWS",
+          "Jenkins",
+        ],
       },
       {
         type: "upgrade",
@@ -56,7 +64,7 @@ const History = () => (
         type: "project",
         title: "Smart City Analytics Platform",
         text: "Streaming data from integrations into data lake and real time analytics",
-        techs: ["Golang", "RabbitMQ", "Kafka", "AWS S3"],
+        techs: ["Golang", "RabbitMQ", "Kafka", "AWS S3", "Gitlab"],
       },
       {
         type: "project",
@@ -69,6 +77,7 @@ const History = () => (
           "Spring Boot",
           "RabbitMQ",
           "Kafka",
+          "Gitlab",
         ],
       },
       {

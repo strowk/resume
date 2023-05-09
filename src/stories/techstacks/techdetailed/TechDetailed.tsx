@@ -20,9 +20,10 @@ which was made outside of Rust ecosystem as a playground for WebAssembly specifi
 I managed to make those two projects to work together in the place where they intersect - 
 building Rust application and then running it using WebAssembly directly in browser.
 
-I made some other projects with Seed, such as [seed-icons](https://strwrite.gitlab.io/seed-icons-browser/)
+I made some other projects with Seed, such as [seed-icons](https://crates.io/crates/seed-icons)
 - library for typed icons importing from Font Awesome and Material Icons and corresponding
-browser of those icons. Website of [git-compose](http://git-compose.gitlab.io/) tool was
+[browser](https://strwrite.gitlab.io/seed-icons-browser/) of those icons. 
+Website of [git-compose](http://git-compose.gitlab.io/) tool was
 also made using Seed framework (though tool itself is on Golang ATM).
 `;
 
@@ -32,7 +33,7 @@ comfortable writing applications of any complexity, solving any
 concurrency issues, write unit or integration tests, deploy and
 maintain Java based services in the cloud. I have been working in
 existing big applications based only on Spring as well as creating
-new Spring Boot based services from scratch. One one of projects
+new Spring Boot based services from scratch. On one of projects
 I was also developing several libraries exposing functionality 
 to Spring Boot based services, which could automatically wire into
 context once developer had included "starter" dependency.`;
@@ -49,11 +50,10 @@ I have been working with Java from the start of my career. During
 been organizing a special classes, which I have attended. We learned
 about JavaSE for one semester and JavaEE (mostly EJB 3) for another.
 
-
 When I started working in that company, for couple of years me and
 my team have been supporting a big monolith solution based on
 Weblogic, which heavily relied on both EJB 2 and 3, with some
-additional usage of jsp. Later when I started working with cloud
+additional usage of jsp. Later, when I started working with cloud
 platform, I received a lot of Spring Boot knowledge in microservice
 architecture. 
 
@@ -79,6 +79,12 @@ made a couple of NodeJS based applications using Typescript.
 One of those was using Express framework to provide HTTP API and 
 another one providing custom logic as AWS Lambda, terminating one
 of AWS API Gateway endpoints.
+The latest big Typescript project I have been working on is about
+[facility management](/timeline#facility-management) and is 
+organised as a monorepo with several NetsJS based microservices, 
+frontend SPA based on Angular, shared libraries and couple NodeJS
+based Azure Functions. I regularly work with all of those parts in
+that project.
             `}
           ></Text>
         </TechItemDetailed>
@@ -90,11 +96,11 @@ of AWS API Gateway endpoints.
 The first time I was exposed to Kotlin when developers of
 that language were showing it on the conference of Java programmers.
 I was interested in several features they presented and tried to make 
-a small application, which would be working in browser (complied to JS)
-as well as installable as desktop app (with JavaFX based UI).
+a [small application](/sides#trustmatrix), which would be working in 
+browser (complied to JS) as well as installable as desktop app (with JavaFX based UI).
 
-At some later point I had a production experience with Kotlin developing
-several backend services for about a year total. Those services were
+At some later point I had a [production experience](/timeline#electric-vehicles-charging-management) 
+with Kotlin developing several backend services for about a year total. Those services were
 based on Spring Boot, used various Spring libraries to interface with
 PostgreSQL database (Spring Data) and Kafka (Spring Kafka, Spring Cloud Kafka Binder),
 as well as some small interface with AWS (using AWS SSM Parameters to pass configs).
@@ -173,6 +179,12 @@ rollout infrastructure (such as creating k8s namespaces, sending emails with acc
 to participants). Those management activities are partially automated with the use
 of Rust-based CLI tool I have made specifically for this purpose.
 
+Another Rust project I have been working on is a [small CLI tool](/sides#probranchinator)
+to get an overview of conflicts between branches in git repository. I have been
+mainly using it myself due to one of my projects having a lot of active branches
+and CI process was causing issues with merge conflicts, so the overview was needed.
+After some short search I've come to conclusion that there is no tool which would
+provide such overview in a convenient way, so I have made one myself.
             `}
           ></Text>
         </TechItemDetailed>
@@ -182,8 +194,11 @@ of Rust-based CLI tool I have made specifically for this purpose.
           <Text
             text={`
 I have played with Lua Script while making games in my free time. There is some info about
-those within [this website](/open-source#games). 
-You could see all published [games I have made here](https://play.crayta.com/users/e4f7b13e-fcdc-423e-9544-e1f6a6272862).
+those within [this website](/sides#games). Unfortunately UGC platform I was using for
+publishing those games is no longer available. I have also used Lua for some small
+scripting tasks in my day job when it was needed to process requests going through
+the service mesh (Istio, Envoy Proxy) and add some additional metadata to them.
+I don't think my knowledge of Lua is very deep, though it is quite a simple language.
             `}
           ></Text>
         </TechItemDetailed>
@@ -204,7 +219,7 @@ using React (using vite, react-router, tailwind and storybook).
 
 I find React in a very convenient place between flexibility and complexity. It has a great
 ecosystem and is normally quite convenient to work with. Compared to vue, it might look
-more complex to start working in, but it quite nicely scales with number of developers 
+more complex to start working in, but it scales quite nicely with number of developers 
 and increasing complexity of application. For most of new projects I would choose React as
 an SPA framework.
 
@@ -218,8 +233,13 @@ and was able to show some historical data as well.
 I have started that app from scratch and made most of it, while later collaborating with the 
 team when more features were developed after I have left the project.
 Most of styles were using Material UI in this app, while some had to be slightly customized.
+I have used Redux for state management (which was not RTK at that time yet unfortunately).
 
-Another big application 
+Another [big React appliction](/timeline#electric-vehicles-charging-management) was
+already present in the project, but I have made lots of changes to it. Specific challenge
+in this case was covering that application with good testing, including running them on CI.
+I have used React Testing Library and Cypress for that. Cypress was also used for
+availability testing of the whole deployment, which I found very convenient.
       `}
           ></Text>
         </TechItemDetailed>
@@ -339,7 +359,8 @@ S3 buckets, MSK clusters, API Gateways, etc.
             text={`
 Mostly I have experience with CDK via Typescript, though I have tried couple of times
 Java-based CDK apps as well. I used CDK on two different projects and found it
-one of the most convenient tools for IaC so far, except for its vendor-lock on AWS.
+one of the most convenient tools for IaC so far, except for its vendor-lock on AWS
+(I have heard of CDK TF, but never got to try it yet).
 I have experience making CDK based Codepipelines in AWS deploying Fargate services
 with databases in RDS and/or DynamoDB as well as serverless applications on AWS Lambda, 
 using escape-hatches to adjust resources with AOP when needed, defining custom resources,
@@ -421,31 +442,72 @@ so I partly knew what to expect, though some AWS specifics took time to adjust t
 
       <ReceivingScroll id="lorawan">
         <TechItemDetailed title="LoraWAN">
-          <Text text={`TBU`}></Text>
+          <Text
+            text={`
+I have been using LoraWAN on my [first IoT project](/timeline#streetlighting)
+in order to connect streetlights to the cloud. I have experience integrating
+with Loraserver (nowadays called Chirpstack) and writing Java based service
+able to marshal and unmarshal data from LoraWAN devices, pass it forward to
+application layer and complete the whole cycle by integrating with frontend SPA.`}
+          ></Text>
         </TechItemDetailed>
       </ReceivingScroll>
 
       <ReceivingScroll id="gitlab">
         <TechItemDetailed title="Gitlab">
-          <Text text={`TBU`}></Text>
+          <Text
+            text={`
+I have a lot of experience working with Gitlab CI/CD, writing customized pipelines,
+optimizing them, integrating with various tools. 
+Example pipelines I have made:
+- [git-compose](https://gitlab.com/git-compose/git-compose/-/blob/master/.gitlab-ci.yml)
+- [drawio-gitlab-ci](https://gitlab.com/strwrite/drawio-gitlab-ci/-/blob/master/.gitlab-ci.yml)
+- [seed-icons-browser](https://gitlab.com/strwrite/seed-icons-browser/-/blob/master/.gitlab-ci.yml)
+- [seed-icons](https://gitlab.com/strwrite/seed-icons/-/blob/master/.gitlab-ci.yml)
+- [trustmatrix](https://gitlab.com/strwrite/trustmatrix/-/blob/master/.gitlab-ci.yml)
+- [seed-playground-site](https://gitlab.com/strwrite/seed-playground-site/-/blob/master/.gitlab-ci.yml)
+
+These are mostly for my own projects, but I have also been working with Gitlab CI/CD
+on [several enterprise projects](/timeline#smart-city-analytics-platform), 
+where I have setup pipelines for complete cycle of building, testing, deploying
+and managing infrastructure. I have been using Gitlab CI/CD with Docker, Kubernetes,
+AWS, Terraform, Helm, Java (both Maven and Gradle), Golang, Python, etc. 
+`}
+          ></Text>
         </TechItemDetailed>
       </ReceivingScroll>
 
       <ReceivingScroll id="jenkins">
         <TechItemDetailed title="Jenkins">
-          <Text text={`TBU`}></Text>
+          <Text
+            text={`
+I have a lot of experience with Jenkins, on several [projects](/timeline#vehicle-telemetry-collection).
+Generally I prefer if possible to use Gitlab CI/CD, but if it is required, dealing
+with Jenkins is also possible, as long as pipeline can be conveniently containerized
+and cluster is not too stretched. I have some experience making custom plugins for Jenkins
+too, as well as a  
+[small open source contribution](https://github.com/jenkinsci/pipeline-aws-plugin/pull/251).
+I haven't done much with Jenkins lately, but I am sure I can get back to it if needed.
+`}
+          ></Text>
         </TechItemDetailed>
       </ReceivingScroll>
 
       <ReceivingScroll id="aws-codepipeline">
         <TechItemDetailed title="AWS Codepipeline">
-          <Text text={`TBU`}></Text>
-        </TechItemDetailed>
-      </ReceivingScroll>
-
-      <ReceivingScroll id="aws-codebuild">
-        <TechItemDetailed title="AWS Codebuild">
-          <Text text={`TBU`}></Text>
+          <Text
+            text={`
+[One of IoT projects](/timeline#electric-vehicles-charging-management) 
+heavily used AWS Codepipeline and I was responsible
+for keeping it up and running, as well as adding new additional stages to it
+when needed and improving the time it took from developers flow.
+I find the whole experience somewhat more clunky than Gitlab CI/CD, but it can
+do its job if proper care taken. I have setup vanilla pipelines and CDK ones (which
+update themselves based on changes in CDK code).
+In that project AWS Codebuild was also used, which is a natural choice for AWS Codepipeline,
+but for keeping source, project was already using Bitbucket.
+`}
+          ></Text>
         </TechItemDetailed>
       </ReceivingScroll>
 
