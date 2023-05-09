@@ -3,6 +3,7 @@ import { faLink } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Icon } from "./Icon";
 import { Techs } from "./Techs";
+import { Header4 } from "../main/Text";
 
 export interface CardLink {
   title: string;
@@ -33,7 +34,7 @@ export const Card = ({
         <div className={`${forceIcon || "md:hidden"} mr-2 mb-2`}>
           <Icon icon={icon} tooltip={iconTooltip} tooltipPlacement="top"></Icon>
         </div>
-        <h3 className="font-semibold text-lg mb-1">{title}</h3>
+        <Header4 value={title}></Header4>
       </div>
       <p className="leading-tight w-full">{text}</p>
       {links && <Links links={links} />}
