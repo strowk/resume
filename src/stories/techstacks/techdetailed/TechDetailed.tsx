@@ -534,7 +534,7 @@ but for keeping source, project was already using Bitbucket.
         <TechItemDetailed title="Redux">
           <Text
             text={`
-I have used Redux on several projects, in [one of them](/timeline#city-traffic-control-system)
+I have used Redux on several projects, in [one of them](/timeline#city-traffic-control-platform)
 I have setup the whole frontend structure from the scratch and used Redux within
 React to application central state. Actions to Redux store would be
 dispatched from several places, one of them was websocket client (with stomp.js on top).
