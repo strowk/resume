@@ -513,31 +513,67 @@ but for keeping source, project was already using Bitbucket.
 
       <ReceivingScroll id="redux">
         <TechItemDetailed title="Redux">
-          <Text text={`TBU`}></Text>
+          <Text
+            text={`
+I have used Redux on several projects, in [one of them](/timeline#city-traffic-control-system)
+I have setup the whole frontend structure from the scratch and used Redux within
+React to application central state. Actions to Redux store would be
+dispatched from several places, one of them was websocket client (with stomp.js on top).
+
+In [another project](/timeline#electric-vehicles-charging-management) the state was
+already managed by Redux, but I have added some new actions and reducers to it as
+well as connected it to new React components. `}
+          ></Text>
         </TechItemDetailed>
       </ReceivingScroll>
 
       <ReceivingScroll id="mobx">
         <TechItemDetailed title="MobX">
-          <Text text={`TBU`}></Text>
+          <Text
+            text={`
+I have used MobX mostly on couple personal projects and additionally helped
+colleagues to set it up together with a lot of other frontend structure in
+one of new projects, which I have only worked on during its starting phase.`}
+          ></Text>
         </TechItemDetailed>
       </ReceivingScroll>
 
       <ReceivingScroll id="cypress">
         <TechItemDetailed title="Cypress">
-          <Text text={`TBU`}></Text>
+          <Text
+            text={`
+I used Cypress in most of frontend projects where I was working with a
+team. I have written a lot of tests, modified and refactored some of
+tests that were broken, integrated Cypress into pipelines on several
+projects. I often guide other team members on how to write tests using
+Cypress, structure them and how to make them more robust (data-testid and such).
+I also have some experience using plugins that compare screenshots (snapshots),
+such as percy.io and cypress-image-snapshot.`}
+          ></Text>
         </TechItemDetailed>
       </ReceivingScroll>
 
       <ReceivingScroll id="junit">
         <TechItemDetailed title="Junit">
-          <Text text={`TBU`}></Text>
+          <Text
+            text={`
+I used Junit in almost every JVM project I have been working in 
+(except Scala ones, where there is more convenient scalatest).
+I have experience with both Junit 4 and 5 as well as migrating
+to the newer one. I used Junit for both unit and integration tests
+(with arquillian and not).`}
+          ></Text>
         </TechItemDetailed>
       </ReceivingScroll>
 
       <ReceivingScroll id="scalatest">
         <TechItemDetailed title="Scalatest">
-          <Text text={`TBU`}></Text>
+          <Text
+            text={`
+Scalatest is a very convenient testing framework for Scala-based
+applications, which I have used in [one of projects](/timeline#vehicle-telemetry-collection)
+quite extensively.`}
+          ></Text>
         </TechItemDetailed>
       </ReceivingScroll>
 
