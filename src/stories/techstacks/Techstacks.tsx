@@ -25,6 +25,7 @@ export const TechnicalSkills = () => (
       <SkillBadgeWithLink value="Akka"></SkillBadgeWithLink>
       <SkillBadgeWithLink value="vue.js"></SkillBadgeWithLink>
       <SkillBadgeWithLink value="seed-rs"></SkillBadgeWithLink>
+      <SkillBadgeWithLink value="NestJS"></SkillBadgeWithLink>
     </SkillBadgesGroup>
 
     <SkillBadgesGroup name="Cloud">
@@ -40,6 +41,7 @@ export const TechnicalSkills = () => (
       <SkillBadgeWithLink value="Kafka"></SkillBadgeWithLink>
       <SkillBadgeWithLink value="RabbitMQ"></SkillBadgeWithLink>
       <SkillBadgeWithLink value="AWS IoT"></SkillBadgeWithLink>
+      <SkillBadgeWithLink value="Azure Servicebus"></SkillBadgeWithLink>
       <SkillBadgeWithLink value="LoraWAN"></SkillBadgeWithLink>
     </SkillBadgesGroup>
 
@@ -61,9 +63,9 @@ export const TechnicalSkills = () => (
 
     <Text>
       This is not a complete list of technologies I have skills to work with,
-      but just the ones most recent/relevant. In a lot of situations I have
-      found that having experience with similar tool is helping to quickly get
-      used to another.
+      but just the ones most relevant. In a lot of situations I have found that
+      having experience with similar tool is helping to quickly get used to
+      another.
     </Text>
 
     <TechDetailed></TechDetailed>

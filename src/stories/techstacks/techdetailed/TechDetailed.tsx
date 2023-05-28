@@ -210,6 +210,25 @@ I don't think my knowledge of Lua is very deep, though it is quite a simple lang
         </TechItemDetailed>
       </ReceivingScroll>
 
+      <ReceivingScroll id="nestjs">
+        <TechItemDetailed title="NestJS">
+          <Text
+            text={`
+On one of [recent projects](/timeline#facility-management) I have used NestJS
+extensively with multiple microservices and one internal library based on 
+that framework as well as several Azure Functions (serverless platfrom in Azure).
+
+NestJS is a framework that is often used in NodeJS ecosystem. I have experience
+of using it to build REST APIs and GRPC services. It is pretty simple and convenient
+to use, though I would not say it is my favorite framework. I would prefer to use
+Rust for backend development, but NestJS is a good choice for NodeJS.
+I have also written a lot of Jest tests with NestJS, using its standard
+testing library, both as a unit and integration tests. When working with databases
+I have used TypeORM integrated with NestJS.`}
+          ></Text>
+        </TechItemDetailed>
+      </ReceivingScroll>
+
       <ReceivingScroll id="react">
         <TechItemDetailed title="React">
           <Text
@@ -579,7 +598,17 @@ quite extensively.`}
 
       <ReceivingScroll id="arquillian">
         <TechItemDetailed title="Arquillian">
-          <Text text={`TBU`}></Text>
+          <Text
+            text={`
+I have been using arquillian to make several integration tests for
+various microservices, though that was in the [project](/timeline#database-as-a-service)
+quite awhile ago.
+
+I have also [contributed](https://github.com/arquillian/arquillian-cube/pull/872) a
+feature to one of arquillian components, which I needed because our project
+was deployed to several Openshift namespaces and within the test I needed to
+interact with several of them.`}
+          ></Text>
         </TechItemDetailed>
       </ReceivingScroll>
     </>
