@@ -330,7 +330,7 @@ update themselves based on changes in CDK code).
 In that project AWS Codebuild was also used, which is a natural choice for AWS Codepipeline,
 but for keeping source, project was already using Bitbucket.
 `})})}),e(l,{id:"redux",children:e(d,{title:"Redux",children:e(n,{text:`
-I have used Redux on several projects, in [one of them](/timeline#city-traffic-control-system)
+I have used Redux on several projects, in [one of them](/timeline#city-traffic-control-platform)
 I have setup the whole frontend structure from the scratch and used Redux within
 React to application central state. Actions to Redux store would be
 dispatched from several places, one of them was websocket client (with stomp.js on top).
