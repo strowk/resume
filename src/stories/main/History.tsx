@@ -6,6 +6,22 @@ const History = () => (
     items={[
       {
         type: "project",
+        title: "Smart Farming Data Exchange",
+        text: "Simplified data exchange, reduced administrative workload, improving farm's profitability",
+        techs: [
+          "Golang",
+          "PostgreSQL",
+          "Kafka",
+          "Kubernetes",
+          "AWS EKS",
+          "AWS CDK",
+          "Typescript",
+          "React",
+          "Next.js",
+        ],
+      },
+      {
+        type: "project",
         title: "Facility Management",
         text: "Tracking of tickets to manage offices and other facilities",
         techs: [
