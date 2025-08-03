@@ -18,6 +18,190 @@ const OpenSourceCard: FunctionComponent = ({ children }) => (
 
 const SideGigs = () => (
   <div className="md:px-4 mx-1">
+    <Header3 value="Pet Projects" />
+    <Text>
+      A bunch of interesting tools and stuff I made for myself, others or just
+      for fun. In my repositories you can find a lot of stuff that I tried, but
+      here I list only the things that actually were done to some degree.
+    </Text>
+    <div className="md:grid grid-cols-2">
+      <OpenSourceCard>
+        <Card
+          title="mcp-k8s"
+          text="Model Context Protocol server for Kubernetes"
+          icon={faCoffee}
+          iconTooltip="MCP Server"
+          techs={["MCP", "Golang", "Kubernetes", "OAuth2"]}
+          forceIcon={true}
+          links={[
+            {
+              url: "https://github.com/strowk/mcp-k8s-go",
+              title: "Repo",
+              icon: faGithub,
+            },
+          ]}
+        ></Card>
+      </OpenSourceCard>
+      <OpenSourceCard>
+        <Card
+          title="foxy-contexts"
+          text="Framework for Model Context Protocol servers built with Golang using fx"
+          icon={faBook}
+          iconTooltip="Library"
+          techs={["MCP", "Golang"]}
+          forceIcon={true}
+          links={[
+            {
+              url: "https://github.com/strowk/foxy-contexts",
+              title: "Repo",
+              icon: faGithub,
+            },
+          ]}
+        ></Card>
+      </OpenSourceCard>
+      <OpenSourceCard>
+        <Card
+          title="sup"
+          text="Command line utility to streamline Trunk-Based-Development process when committing to git"
+          icon={faCoffee}
+          iconTooltip="CLI Tool"
+          techs={["Rust", "Git"]}
+          forceIcon={true}
+          links={[
+            {
+              url: "https://github.com/strowk/sup",
+              title: "Repo",
+              icon: faGithub,
+            },
+          ]}
+        ></Card>
+      </OpenSourceCard>
+      <OpenSourceCard>
+        <Card
+          title="mcp-autotest"
+          text="Autotesting tool for MCP servers"
+          icon={faCoffee}
+          iconTooltip="CLI Tool"
+          techs={["MCP", "Golang"]}
+          forceIcon={true}
+          links={[
+            {
+              url: "https://github.com/strowk/mcp-autotest",
+              title: "Repo",
+              icon: faGithub,
+            },
+          ]}
+        ></Card>
+      </OpenSourceCard>
+
+      <OpenSourceCard>
+        <Card
+          title="mcptee"
+          text="Logging tool to troubleshoot MCP servers when developing or testing"
+          icon={faCoffee}
+          iconTooltip="CLI Tool"
+          techs={["MCP", "Golang"]}
+          forceIcon={true}
+          links={[
+            {
+              url: "https://github.com/strowk/mcptee",
+              title: "Repo",
+              icon: faGithub,
+            },
+          ]}
+        ></Card>
+      </OpenSourceCard>
+      <OpenSourceCard>
+        <Card
+          title="synf"
+          text="Hot reloading tool for quicker development of MCP servers"
+          icon={faCoffee}
+          iconTooltip="CLI Tool"
+          techs={["MCP", "Rust"]}
+          forceIcon={true}
+          links={[
+            {
+              url: "https://github.com/strowk/synf",
+              title: "Repo",
+              icon: faGithub,
+            },
+          ]}
+        ></Card>
+      </OpenSourceCard>
+      <OpenSourceCard>
+        <Card
+          title="Compose for Git"
+          text="CLI tool and plugins to manage several local git repositories described in one yaml file"
+          icon={faCoffee}
+          iconTooltip="CLI Tool"
+          techs={[
+            "Golang",
+            "Git",
+            "VSCode Extension API",
+            "Typescript",
+            "GRPC",
+          ]}
+          forceIcon={true}
+        ></Card>
+      </OpenSourceCard>
+      <OpenSourceCard>
+        <Card
+          title="trustmatrix"
+          text="Evolutionary simultaion of Prisoner's Dilemma"
+          icon={faCoffee}
+          iconTooltip="Research Project"
+          techs={["Kotlin", "Game theory", "Gitlab CI"]}
+          forceIcon={true}
+          links={[
+            {
+              url: "https://gitlab.com/strwrite/trustmatrix",
+              title: "Repo",
+              icon: faGitlab,
+            },
+            {
+              url: "https://strwrite.gitlab.io/trustmatrix/",
+              title: "Demo",
+              icon: faLink,
+            },
+          ]}
+        ></Card>
+      </OpenSourceCard>
+      <OpenSourceCard>
+        <Card
+          title="probranchinator"
+          text="Display status of conflicts between git branches in terminal"
+          icon={faCoffee}
+          iconTooltip="CLI Tool"
+          techs={["Rust", "clap-rs", "Git"]}
+          forceIcon={true}
+          links={[
+            {
+              url: "https://github.com/strowk/probranchinator",
+              title: "Repo",
+              icon: faGithub,
+            },
+          ]}
+        ></Card>
+      </OpenSourceCard>
+      <OpenSourceCard>
+        <Card
+          title="How to transform draw.io xml to picture in Gitlab CI"
+          text=""
+          icon={faCoffee}
+          iconTooltip="Demo"
+          techs={["React", "Material UI"]}
+          forceIcon={true}
+          links={[
+            {
+              url: "https://gitlab.com/strwrite/drawio-gitlab-ci",
+              title: "Repo",
+              icon: faGitlab,
+            },
+          ]}
+        ></Card>
+      </OpenSourceCard>
+    </div>
+
     <Header3 value="Contributions" />
     <Text>
       Features, bugfixes, libraries and tools contributed to already existing
@@ -145,87 +329,6 @@ const SideGigs = () => (
           icon={faCheckCircle}
           iconTooltip="Bugfix"
           forceIcon={true}
-        ></Card>
-      </OpenSourceCard>
-    </div>
-
-    <Header3 value="Pet Projects" />
-    <Text>
-      A bunch of interesting tools and stuff I made for myself, others or just
-      for fun. In my repositories you can find a lot of stuff that I tried, but
-      here I list only the things that actually were done to some degree.
-    </Text>
-    <div className="md:grid grid-cols-2">
-      <OpenSourceCard>
-        <Card
-          title="Compose for Git"
-          text="CLI tool and plugins to manage several local git repositories described in one yaml file"
-          icon={faCoffee}
-          iconTooltip="CLI Tool"
-          techs={[
-            "Golang",
-            "Git",
-            "VSCode Extension API",
-            "Typescript",
-            "GRPC",
-          ]}
-          forceIcon={true}
-        ></Card>
-      </OpenSourceCard>
-      <OpenSourceCard>
-        <Card
-          title="trustmatrix"
-          text="Evolutionary simultaion of Prisoner's Dilemma"
-          icon={faCoffee}
-          iconTooltip="Research Project"
-          techs={["Kotlin", "Game theory", "Gitlab CI"]}
-          forceIcon={true}
-          links={[
-            {
-              url: "https://gitlab.com/strwrite/trustmatrix",
-              title: "Repo",
-              icon: faGitlab,
-            },
-            {
-              url: "https://strwrite.gitlab.io/trustmatrix/",
-              title: "Demo",
-              icon: faLink,
-            },
-          ]}
-        ></Card>
-      </OpenSourceCard>
-      <OpenSourceCard>
-        <Card
-          title="probranchinator"
-          text="Display status of conflicts between git branches in terminal"
-          icon={faCoffee}
-          iconTooltip="CLI Tool"
-          techs={["Rust", "clap-rs", "Git"]}
-          forceIcon={true}
-          links={[
-            {
-              url: "https://github.com/strowk/probranchinator",
-              title: "Repo",
-              icon: faGithub,
-            },
-          ]}
-        ></Card>
-      </OpenSourceCard>
-      <OpenSourceCard>
-        <Card
-          title="How to transform draw.io xml to picture in Gitlab CI"
-          text=""
-          icon={faCoffee}
-          iconTooltip="Demo"
-          techs={["React", "Material UI"]}
-          forceIcon={true}
-          links={[
-            {
-              url: "https://gitlab.com/strwrite/drawio-gitlab-ci",
-              title: "Repo",
-              icon: faGitlab,
-            },
-          ]}
         ></Card>
       </OpenSourceCard>
     </div>
