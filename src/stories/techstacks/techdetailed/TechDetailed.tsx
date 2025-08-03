@@ -13,8 +13,9 @@ stream processing of huge amounts of data, while applying filters based on confi
 set by users from frontend.`;
 
 const SEED = `
-For Seed framework I have built an [interactive playground](https://ide.play-seed.dev/), where you
-could try out some simple scenarios. Rust is used there for backend, where I based my work
+For Seed framework I have built an [interactive playground](https://gitlab.com/strwrite/seed-playground-docs/-/blob/master/src/about.md)
+(currently shut down), where developers could try out some simple scenarios. 
+Rust is used there for backend, where I based my work
 on existing Rust Playground backend. For frontend this system is forking WebAssemblyStudio, 
 which was made outside of Rust ecosystem as a playground for WebAssembly specifically. 
 I managed to make those two projects to work together in the place where they intersect - 
