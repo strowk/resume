@@ -254,8 +254,8 @@ const SideGigs = () => (
           forceIcon={true}
           links={[
             {
-              url: "https://play.crayta.com/games/752238b5-6db0-4ade-b26f-579be485b37a",
-              title: "Crayta",
+              url: "https://craytak.it/crayta_games/3039",
+              title: "CraytaKit",
               icon: faGamepad,
             },
           ]}
@@ -271,8 +271,8 @@ const SideGigs = () => (
           forceIcon={true}
           links={[
             {
-              url: "https://play.crayta.com/games/266de510-225e-4f3d-94f8-cba7d067a12f",
-              title: "Crayta",
+              url: "https://craytak.it/crayta_games/2281",
+              title: "CraytaKit",
               icon: faGamepad,
             },
           ]}
@@ -288,8 +288,8 @@ const SideGigs = () => (
           forceIcon={true}
           links={[
             {
-              url: "https://play.crayta.com/games/e6766b4a-2eb8-4190-8e70-5729e0daf1aa",
-              title: "Crayta",
+              url: "https://craytak.it/crayta_games/4213",
+              title: "CraytaKit",
               icon: faGamepad,
             },
           ]}
@@ -305,8 +305,8 @@ const SideGigs = () => (
           forceIcon={true}
           links={[
             {
-              url: "https://play.crayta.com/games/a73b4699-3531-41ab-97aa-870802d6bf98",
-              title: "Crayta",
+              url: "https://craytak.it/crayta_games/355",
+              title: "CraytaKit",
               icon: faGamepad,
             },
           ]}
@@ -321,13 +321,6 @@ const SideGigs = () => (
           iconTooltip="Package"
           techs={["Lua", "html", "css", "Javascript"]}
           forceIcon={true}
-          links={[
-            {
-              url: "https://forum.crayta.com/t/radar/2847",
-              title: "Crayta",
-              icon: faLink,
-            },
-          ]}
         ></Card>
       </OpenSourceCard>
       <OpenSourceCard>
@@ -338,13 +331,6 @@ const SideGigs = () => (
           techs={["Lua", "html", "css", "Javascript"]}
           iconTooltip="Package"
           forceIcon={true}
-          links={[
-            {
-              url: "https://forum.crayta.com/t/superhex/1616",
-              title: "Crayta",
-              icon: faLink,
-            },
-          ]}
         ></Card>
       </OpenSourceCard>
       <OpenSourceCard>
@@ -355,13 +341,6 @@ const SideGigs = () => (
           iconTooltip="Package"
           techs={["Lua", "html", "css", "Javascript"]}
           forceIcon={true}
-          links={[
-            {
-              url: "https://forum.crayta.com/t/trackmouse/1491",
-              title: "Crayta",
-              icon: faLink,
-            },
-          ]}
         ></Card>
       </OpenSourceCard>
       <OpenSourceCard>
@@ -372,13 +351,6 @@ const SideGigs = () => (
           iconTooltip="Package"
           techs={["Lua", "html", "css", "Javascript"]}
           forceIcon={true}
-          links={[
-            {
-              url: "https://forum.crayta.com/t/holo-target-tracker/1313",
-              title: "Crayta",
-              icon: faLink,
-            },
-          ]}
         ></Card>
       </OpenSourceCard>
     </div>
