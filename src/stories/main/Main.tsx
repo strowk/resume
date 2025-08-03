@@ -19,7 +19,7 @@ const TopSummary: FunctionComponent = () => (
         who is focused on complete cycle of delivering cloud-based services
       </li>
       <li>using DevOps practices and Agile methodology</li>
-      <li>with 8 years of working experience</li>
+      <li>with 12 years of working experience</li>
       <li>currently living in Munich</li>
     </ul>
     <ReceivingScroll id={"contacts"}>
