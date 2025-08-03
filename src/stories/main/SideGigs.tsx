@@ -234,16 +234,52 @@ const SideGigs = () => (
     <Text>
       At some point I wanted to try myself in game design and development and
       made a bunch of games and libraries (like packages) on a platform known as
-      Crayta. Crayta is accessible in Stadia and in Epic Games. Game logic is
-      implemented with Lua scripts, UI widgets on html/css/js with some
-      specifics (Gameface engine).
+      Crayta and later in another one - dotbigbang.
     </Text>
     <Text>
-      Source code is not available as a part of version control system, however
-      all games in the list below could be remixed, which allows to create own
-      copy with all the same code and configurations.
+      Crayta has been accessible in Stadia and in Epic Games, but facebook have
+      bought and closed it. Game logic was implemented with Lua scripts, UI
+      widgets on html/css/js with some specifics (Gameface engine).
+    </Text>
+    <Text>
+      These days sometimes I work on games and play in dotbigbang platform,
+      where I use Typescript for game logic and UI.
     </Text>
     <div className="md:grid grid-cols-2">
+      <OpenSourceCard>
+        <Card
+          title="Laser Shot"
+          text="Simple multiplayer game where you control a small hovercraft with a laser cannon"
+          icon={faGamepad}
+          iconTooltip="Game"
+          techs={["Typescript"]}
+          forceIcon={true}
+          links={[
+            {
+              url: "https://dotbigbang.com/game/f213232ad9e543358b664b4931535a47/laser-shot?mp=f2132",
+              title: "dotbigbang",
+              icon: faGamepad,
+            },
+          ]}
+        ></Card>
+      </OpenSourceCard>
+      <OpenSourceCard>
+        <Card
+          title="Elysium Station Defense"
+          text="Single player game where you defend a space station from waves of enemies, while upgrading your spaceship"
+          icon={faGamepad}
+          iconTooltip="Game"
+          techs={["Typescript"]}
+          forceIcon={true}
+          links={[
+            {
+              url: "https://dotbigbang.com/game/5dc23f09a27f4b4fa83841f56d26c055/elysium-station-defense",
+              title: "dotbigbang",
+              icon: faGamepad,
+            },
+          ]}
+        ></Card>
+      </OpenSourceCard>
       <OpenSourceCard>
         <Card
           title="Nuclear Gear Snake"
